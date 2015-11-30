@@ -8,8 +8,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'tmhedberg/matchit'
-Plugin 'ecomba/vim-ruby-refactoring'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,12 +82,3 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-nnoremap <leader>rap  :RAddParameter<cr>
-nnoremap <leader>rcpc :RConvertPostConditional<cr>
-nnoremap <leader>rel  :RExtractLet<cr>
-vnoremap <leader>rec  :RExtractConstant<cr>
-vnoremap <leader>relv :RExtractLocalVariable<cr>
-nnoremap <leader>rit  :RInlineTemp<cr>
-vnoremap <leader>rrlv :RRenameLocalVariable<cr>
-vnoremap <leader>rriv :RRenameInstanceVariable<cr>
-vnoremap <leader>rem  :RExtractMethod<cr>
