@@ -1,3 +1,14 @@
+# Ruby
 alias be='bundle exec'
+
+# System
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias c='clear'
+
+# Git
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias ga='function _git_add(){ git add $1; gs; };_git_add'
+alias stash='git stash'
+alias unstash='git stash pop'
