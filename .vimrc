@@ -8,6 +8,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-endwise'
+Plugin 'myusuf3/numbers.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,6 +43,8 @@ set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+" insert mode mappings
+imap jk <Esc>
 " Ctrl-P
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,3 +86,4 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+nnoremap <C-n> :NumbersToggle<CR>
