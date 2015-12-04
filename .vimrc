@@ -30,6 +30,8 @@ set expandtab " tabs are spaces
 set number  " show line numbers
 set showcmd " show command in bottom bar
 set cursorline " highlight current line
+set laststatus=2 " always show status line
+set statusline+=%f " show current file name in status line
 
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
