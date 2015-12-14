@@ -6,6 +6,7 @@ alias bi='bundle install'
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias c='clear'
 alias cls='clear && ls'
+alias ls='ls -tr'
 
 # Git
 alias gs='git status'

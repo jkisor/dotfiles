@@ -10,6 +10,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,8 +48,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " insert mode mappings
 imap jk <Esc>
-" Ctrl-P
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
