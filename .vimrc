@@ -8,9 +8,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'myusuf3/numbers.vim'
 Plugin 'tpope/vim-endwise'
-Plugin 'myusuf3/numbers.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'elmcast/elm-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -29,6 +32,7 @@ set expandtab " tabs are spaces
 
 " UI 
 set number  " show line numbers
+set relativenumber "show relative numbers to cursor
 set showcmd " show command in bottom bar
 set cursorline " highlight current line
 set laststatus=2 " always show status line
@@ -83,9 +87,12 @@ endfunction
 nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 " RSpec.vim mappings
+let g:rspec_command = "!docker-compose exec test rspec {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-nnoremap <C-n> :NumbersToggle<CR>
+" this is for the number switching plugin (slow)
+"nnoremap <C-n> :NumbersToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
