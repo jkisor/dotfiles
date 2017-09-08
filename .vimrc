@@ -47,6 +47,31 @@ set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+" Split Direction
+set splitbelow
+set splitright
+
+" Split Navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Split on cursor ctag
+map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Folding
+set foldmethod=syntax
+set nofoldenable "don't fold when opening file
+
+function! MyFoldText()
+  let nl = v:foldend - v:foldstart + 1
+  let linetext = substitute(getline(v:foldstart),"^ *","",1)
+  let txt = '(' . nl . ')' . ' + ' . linetext
+  return txt
+endfunction
+set foldtext=MyFoldText()
+
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
